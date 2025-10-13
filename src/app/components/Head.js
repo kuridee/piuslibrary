@@ -14,7 +14,7 @@ export default function Header() {
     <nav className="container mx-auto flex justify-between items-center p-3">
 
       <h1 className="flex items-center gap-2  text-xl font-bold tracking-wide text-gray-600">
-      <Globe className="w-8 h-8 text-blue-600" />Tailwind Corp.</h1>
+      <Globe className="w-8 h-8 text-blue-600" />Pius XII - Library </h1>
 
       <div className="hidden lg:flex gap-12 text-sm text-gray-600">
 

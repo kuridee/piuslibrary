@@ -6,15 +6,15 @@ export default function Home() {
 
       <div className="sm:col-span-7 min-h-[700px] flex flex-col justify-center">
         <p className=" text-[70px] font-bold">PIUS XII COLLEGE LIBRARY</p>
-        <p className=" md:text-lg  w-full sm:w-[300px] md:w-[400px] lg:w-[500px] max-w-full h-auto bg-gray-100 p-4 rounded-lg text-gray-800 leading-relaxed">“Knowledge lives in every corner of the library. 
-        Come and explore the world without leaving your seat.”</p><br/>
+        <p className=" md:text-lg  w-full sm:w-[300px] md:w-[400px] lg:w-[500px] max-w-full h-auto  p-4 rounded-lg text-gray-800 leading-relaxed">
+        Knowledge lives in every corner of the library. Every book is a doorway to a new world. Curiosity leads you to endless discoveries. Come and explore the universe without leaving your seat.</p><br/>
 
         <button className="bg-red-500 text-white px-6 py-3 rounded-lg font-semibold w-40">
   Know more ...
 </button><br/><br/>
 
       </div>
-      <div className=" sm:col-span-5 min-h-[700px]">
+      <div className=" sm:col-span-5 min-h-[700px] mt-8">
 
       <div className="relative sm:col-span-5 min-h-[600px] ">
           <Image

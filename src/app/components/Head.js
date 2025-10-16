@@ -12,7 +12,7 @@ export default function Header() {
 
   <header className="text-gray-900 shadow-md">
 
-    <nav className="container mx-auto flex justify-between items-center p-3">
+    <nav className="container mx-auto flex justify-between items-center p-6">
 
       <h1 className="flex items-center gap-2  text-xl font-bold tracking-wide text-gray-600">
   
@@ -20,11 +20,11 @@ export default function Header() {
       
       PIUS XII COLLEGE </h1>
 
-      <div className="hidden lg:flex gap-12 text-sm text-gray-600">
+      <div className="hidden lg:flex gap-12 text-md text-gray-600">
 
         <Link href="/"></Link>
         <Link href="/about">Resources</Link>
-        <Link href="/portfolio">Announcements and Guidelines</Link>
+        <Link href="/portfolio">Library Guidelines</Link>
         <Link href="/news">About Us</Link>
         <Link href="/contact">Contact Us</Link>
         

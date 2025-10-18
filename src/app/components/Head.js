@@ -14,18 +14,24 @@ export default function Header() {
 
     <nav className="container mx-auto flex justify-between items-center p-6">
 
+
+    <Link href="/" className="no-underline">
+
       <h1 className="flex items-center gap-2  text-xl font-bold tracking-wide text-gray-600">
   
 
       
       PIUS XII COLLEGE </h1>
 
+      </Link>
+
+
       <div className="hidden lg:flex gap-12 text-md text-gray-600">
 
         <Link href="/"></Link>
-        <Link href="/about">Resources</Link>
-        <Link href="/portfolio">Library Guidelines</Link>
-        <Link href="/news">About Us</Link>
+        <Link href="/resources">Online Resources</Link>
+        <Link href="/guidelines">Library Guidelines</Link>
+        <Link href="/about">About Us</Link>
         <Link href="/contact">Contact Us</Link>
         
       </div>

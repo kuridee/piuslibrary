@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+
 export default function Home() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-12 gap-4">
@@ -18,7 +19,7 @@ export default function Home() {
 
       <div className="relative sm:col-span-5 min-h-[600px] ">
           <Image
-            src="/images/pius.png"
+            src="/images/pius.jpg"
             alt="MySite Logo"
             fill
             className="object-cover rounded-lg grayscale"
@@ -73,10 +74,15 @@ export default function Home() {
   </p>
 </div>
 
-<div className="sm:col-span-12 mt-5 mb-5 p-8 flex flex-col md:flex-row items-center md:items-center justify-center gap-10 bg-gray-50 rounded-xl shadow-sm">
+
+<div className="sm:col-span-12 mt-5 mb-5 p-8 flex flex-col md:flex-row items-center md:items-center justify-center gap-10">
 
   {/* Left Side - Text */}
+  
   <div className="md:w-1/2 text-center md:text-left">
+  <p className="text-2xl font-bold text-gray-800 mb-1">LIBRAY DEPARTMENT</p><br></br>
+
+ 
     <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6">
       The College Library, through its resources, facility, and staff, is dedicated
       to providing open access to information and offering the services and tools
@@ -87,7 +93,7 @@ export default function Home() {
 
     <p className="text-2xl font-bold text-gray-800 mb-1">Regin Maligad</p>
     <p className="text-lg text-gray-600 mb-1">Library Head</p>
-    <p className="text-lg text-gray-600">Pius XII College</p>
+    <p className="text-lg text-gray-600">Pius XII College, Jaro Iloilo City</p>
   </div>
 
   {/* Right Side - Image */}
@@ -101,6 +107,56 @@ export default function Home() {
   </div>
 
 </div>
+
+
+<div className="sm:col-span-12 mt-8 mb-8 p-8 flex flex-col md:flex-row items-center md:items-center justify-center gap-10">
+
+   {/* Right Side - Image */}
+   <div className="relative w-56 h-56 md:w-72 md:h-72 rounded-lg overflow-hidden shadow-md">
+    <Image
+      src="/images/pads.png"
+      alt="Regin Maligad"
+      fill
+      className="object-cover rounded-lg"
+    />
+  </div>
+
+  {/* Left Side - Text */}
+  <div className="md:w-1/2 text-center md:text-left">
+   
+
+  <p className="text-2xl font-bold text-gray-800 mb-1">Rev. Fr. Emmanuel G. Tuberada</p>
+<p className="text-lg text-gray-600 mb-1">HEI President</p>
+<p className="text-lg text-gray-600">Pius XII College Iloilo, Jaro Iloilo City</p><br></br>
+
+    <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6">
+    Rev. Fr. Emmanuel G. Tuberada is the esteemed President of Pius XII College Iloilo, located in Jaro, Iloilo City. 
+    With a profound commitment to academic excellence, spiritual formation, and community development, he leads 
+    the institution with vision, integrity, and dedication. Under his guidance, Pius XII College continues to uphold
+     its mission of nurturing young men and women who are not only academically proficient but also morally grounded
+      and socially responsible. Fr. Tuberada’s leadership emphasizes holistic education, blending faith, knowledge, 
+      and service to prepare students to become competent, compassionate, and faithful members of society.
+    </p>
+  </div>
+
+
+</div>
+{/* Map Section */}
+<section className="sm:col-span-12 mt-12 mb-12 px-6">
+  <h2 className="text-2xl font-semibold text-gray-700 text-center mb-6">Our Location</h2>
+  <div className="w-full h-96 md:h-[500px] lg:h-[600px] rounded-xl overflow-hidden shadow-lg mx-auto">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.1355521380615!2d122.55346257595409!3d10.72402668942161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aee52113da3527%3A0xd769a18bddbacf7!2sPIUS%20XII%20COLLEGE%20ILOILO%2C%20INC.!5e0!3m2!1sen!2sph!4v1760756449216!5m2!1sen!2sph"
+      width="100%"
+      height="100%"
+      style={{ border: 0 }}
+      allowFullScreen
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      className="rounded-xl"
+    ></iframe>
+  </div>
+</section>
 
 
 

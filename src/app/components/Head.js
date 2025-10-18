@@ -31,6 +31,7 @@ export default function Header() {
         <Link href="/"></Link>
         <Link href="/resources">Online Resources</Link>
         <Link href="/guidelines">Library Guidelines</Link>
+        <Link href="/facilities">Library Facility</Link>
         <Link href="/about">About Us</Link>
         <Link href="/contact">Contact Us</Link>
         

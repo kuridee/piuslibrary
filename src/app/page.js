@@ -19,10 +19,10 @@ export default function Home() {
 
       <div className="relative sm:col-span-5 min-h-[600px] ">
           <Image
-            src="/images/pius.jpg"
+            src="/images/33.jpg"
             alt="MySite Logo"
             fill
-            className="object-cover rounded-lg grayscale"
+            className="object-cover rounded-lg grayscale  hover:scale-105 transition-transform duration-500"
           />
       </div>
 
@@ -34,7 +34,7 @@ export default function Home() {
 
   <div className="flex flex-col md:flex-row gap-6 justify-center mt-10">
   {/* Reader's Services */}
-  <div className="md:w-1/2 p-8 bg-gray-50 rounded-lg shadow-md">
+  <div className="md:w-1/2 p-8 bg-gray-50 rounded-lg shadow-md  hover:scale-105 transition-transform duration-500">
     <p className="font-bold text-xl text-gray-800 mb-4">Reader’s Services</p>
 
     <p className="text-gray-700 md:text-lg leading-relaxed mb-4">
@@ -49,7 +49,7 @@ export default function Home() {
   </div>
 
   {/* Technical Services */}
-  <div className="md:w-1/2 p-8 bg-gray-50 rounded-lg shadow-md">
+  <div className="md:w-1/2 p-8 bg-gray-50 rounded-lg shadow-md  hover:scale-105 transition-transform duration-500">
     <p className="font-bold text-xl text-gray-800 mb-4">Technical Services</p>
 
     <p className="text-gray-700 md:text-lg  leading-relaxed mb-4">
@@ -91,18 +91,18 @@ export default function Home() {
       fulfills its role within the institution.
     </p>
 
-    <p className="text-2xl font-bold text-gray-800 mb-1">Regin Maligad</p>
-    <p className="text-lg text-gray-600 mb-1">Library Head</p>
+    <p className="text-2xl font-bold text-gray-800 mb-1">Regina A. Maligad, MSLS</p>
+    <p className="text-lg text-gray-600 mb-1">Chief Librarian</p>
     <p className="text-lg text-gray-600">Pius XII College, Jaro Iloilo City</p>
   </div>
 
   {/* Right Side - Image */}
   <div className="relative w-56 h-56 md:w-72 md:h-72 rounded-lg overflow-hidden shadow-md">
     <Image
-      src="/images/regin.jpg"
+      src="/images/1.jpg"
       alt="Regin Maligad"
       fill
-      className="object-cover rounded-lg"
+      className="object-cover rounded-lg  hover:scale-105 transition-transform duration-500"
     />
   </div>
 
@@ -117,7 +117,7 @@ export default function Home() {
       src="/images/pads.png"
       alt="Regin Maligad"
       fill
-      className="object-cover rounded-lg"
+      className="object-cover rounded-lg  hover:scale-105 transition-transform duration-500"
     />
   </div>
 

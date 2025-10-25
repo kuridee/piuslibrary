@@ -196,7 +196,7 @@ export default function ResourcePage(){
         {/* 1 - LibraryKa */}
         <div className="bg-white shadow-md rounded-2xl p-6 text-center border hover:shadow-lg transition">
           <h3 className="text-lg font-semibold text-indigo-600 mb-2">
-            <Link href="https://libraryka.com" target="_blank">
+            <Link href="https://librarika.com" target="_blank">
               LibraryKa
             </Link>
           </h3>

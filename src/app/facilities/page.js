@@ -34,7 +34,7 @@ export default function FacilitiesPage() {
             <p className="text-gray-700 leading-relaxed text-justify">
               The Library Room is designed to foster focus, comfort, and creativity. It features well-arranged 
               shelves of books, journals, and digital materials, as well as designated study corners for both 
-              individual and group research. The area is air-conditioned, well-lit, and Wi-Fi enabled—providing 
+              individual and group research. The area is well-lit, and Wi-Fi enabled—providing 
               a conducive space for academic growth. Students can access online databases, use computer terminals, 
               or simply enjoy a quiet moment of reading in a serene atmosphere.
             </p>

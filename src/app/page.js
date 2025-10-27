@@ -97,9 +97,9 @@ export default function Home() {
   </div>
 
   {/* Right Side - Image */}
-  <div className="relative w-56 h-56 md:w-72 md:h-72 rounded-lg overflow-hidden shadow-md">
+  <div className="relative w-56 h-56 md:w-72 md:h-80 rounded-lg overflow-hidden shadow-md">
     <Image
-      src="/images/1.jpg"
+      src="/images/lib.png"
       alt="Regin Maligad"
       fill
       className="object-cover rounded-lg  hover:scale-105 transition-transform duration-500"
@@ -141,6 +141,46 @@ export default function Home() {
 
 
 </div>
+
+<div className="sm:col-span-12 mt-5 mb-5 p-8 flex flex-col md:flex-row items-center md:items-center justify-center gap-10">
+
+  {/* Left Side - Text */}
+  
+  <div className="md:w-1/2 text-center md:text-left">
+
+ 
+    <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6">
+    The College Library is devoted to advancing the academic mission of Pius XII College by ensuring open and equitable access
+     to information resources. Through its comprehensive collection, modern facilities, and dedicated staff, the Library supports
+      teaching, learning, and research endeavors. As educational needs and information technologies continue to evolve, the Library
+       remains responsive, continuously enhancing its services to meet the growing demands of its academic community.
+    </p>
+
+    <p className="text-2xl font-bold text-gray-800 mb-1"> Sr. Providenza, Dean of Studies</p>
+    <p className="text-lg text-gray-600">Pius XII College, Jaro Iloilo City</p>
+  </div>
+
+  {/* Right Side - Image */}
+  <div className="relative w-56 h-56 md:w-72 md:h-72 rounded-lg overflow-hidden shadow-md">
+    <Image
+      src="/images/sis.png"
+      alt="Dean"
+      fill
+      className="object-cover rounded-lg  hover:scale-105 transition-transform duration-500"
+    />
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
 {/* Map Section */}
 <section className="sm:col-span-12 mt-12 mb-12 px-6">
   <h2 className="text-2xl font-semibold text-gray-700 text-center mb-6">Our Location</h2>

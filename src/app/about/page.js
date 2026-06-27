@@ -1,3 +1,5 @@
+
+
 export default function AboutPage() {
   return (
     <div className="bg-gray-50 min-h-screen py-12 px-6">

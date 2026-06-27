@@ -50,21 +50,37 @@ export default function Header() {
    
 
  {/* Mobile + Tablet Dropdown Menu */}
-    { isOpen && (
+ <div
+  className={`lg:hidden overflow-hidden bg-gray-800 text-white transition-all duration-500 ease-in-out ${
+    isOpen
+      ? "max-h-96 opacity-100 p-5"
+      : "max-h-0 opacity-0 px-5 py-0"
+  }`}
+>
+  <div className="space-y-2">
+    
 
-      <div className="lg:hidden bg-gray-800 text-white  px-4 pb-4 space-y-2">
+    <Link href="/resources" className="block hover:text-gray-300">
+      Online Resources
+    </Link>
 
-        <Link href="/" className="block"></Link>
-        <Link href="/about" className="block">About</Link>
-        <Link href="/contact" className="block">Contact</Link>
-        <Link href="/portfolio" className="block">Portfolio</Link>
-        
-      </div>
+    <Link href="/guidelines" className="block hover:text-gray-300">
+      Library Guidelines
+    </Link>
 
+    <Link href="/facilities" className="block hover:text-gray-300">
+      Library Facility
+    </Link>
 
+    <Link href="/about" className="block hover:text-gray-300">
+      About Us
+    </Link>
 
-    )}
-  
+    <Link href="/contact" className="block hover:text-gray-300">
+      Contact Us
+    </Link>
+  </div>
+</div>
   </header>
 
   );

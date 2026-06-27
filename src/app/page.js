@@ -1,70 +1,160 @@
+"use client";
+
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
+import {
+  motion,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 
 
 export default function Home() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: "ease-in-out"
+      
+    });
+  }, 
+  []);
+  const { scrollY } = useScroll();
+
+const heroY = useTransform(scrollY, [0, 500], [0, 150]);
+
+const imageY = useTransform(scrollY, [0, 500], [0, -120]);
+
+const textOpacity = useTransform(scrollY, [0, 300], [1, 0.3]);
   return (
     <div className="grid grid-cols-1 sm:grid-cols-12 gap-4">
 
-      <div className="sm:col-span-7 min-h-[700px] flex flex-col justify-center">
-        <p className=" text-[70px] font-bold">PIUS XII COLLEGE LIBRARY</p>
-        <p className=" md:text-lg  w-full sm:w-[300px] md:w-[400px] lg:w-[500px] max-w-full h-auto  p-4 rounded-lg text-gray-800 leading-relaxed">
-        Knowledge lives in every corner of the library. Every book is a doorway to a new world. Curiosity leads you to endless discoveries. Come and explore the universe without leaving your seat.</p><br/>
+<motion.div
+  style={{
+    y: heroY,
+    opacity: textOpacity,
+  }}
+  className="sm:col-span-7 min-h-[700px] flex flex-col justify-center"
+>
+  <motion.p
+    initial={{ opacity: 0, x: -100 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 1 }}
+    className="text-[70px] font-bold leading-tight"
+  >
+    PIUS XII COLLEGE LIBRARY
+  </motion.p>
 
-        <button className="bg-red-500 text-white px-6 py-3 rounded-lg font-semibold w-40">
-  Know more ...
-</button><br/><br/>
+  <motion.p
+    initial={{ opacity: 0, y: 50 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1.2 }}
+    className="md:text-lg w-full sm:w-[300px] md:w-[400px] lg:w-[500px] max-w-full h-auto p-4 rounded-lg text-gray-800 leading-relaxed"
+  >
+    Knowledge lives in every corner of the library. Every
+    book is a doorway to a new world. Curiosity leads you
+    to endless discoveries. Come and explore the universe
+    without leaving your seat.
+  </motion.p>
 
-      </div>
-      <div className=" sm:col-span-5 min-h-[700px] mt-8">
-
-      <div className="relative sm:col-span-5 min-h-[600px] ">
-          <Image
-            src="/images/33.jpg"
-            alt="MySite Logo"
-            fill
-            className="object-cover rounded-lg grayscale  hover:scale-105 transition-transform duration-500"
-          />
-      </div>
-
-
-      </div>
-
-      <div className="sm:col-span-12 min-h-[400px]">
-  <p className=" text-center font-bold text-xl text-gray-800">LIBRARY SERVICES</p><br/>
+  <motion.button
+    whileHover={{
+      scale: 1.05,
+    }}
+    whileTap={{
+      scale: 0.95,
+    }}
+    className="bg-red-500 hover:bg-red-600 transition-all duration-300 text-white px-6 py-3 rounded-lg font-semibold w-40 shadow-lg"
+  >
+    Know more ...
+  </motion.button>
+</motion.div>
+          <motion.div
+            style={{ y: imageY }}
+            className="sm:col-span-5 min-h-[700px] mt-8"
+          >
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1.3 }}
+              className="relative sm:col-span-5 min-h-[600px]"
+            >
+              <Image
+                src="/images/33.jpg"
+                alt="MySite Logo"
+                fill
+                className="object-cover rounded-lg grayscale hover:scale-105 hover:shadow-2xl transition-all duration-700"
+              />
+            </motion.div>
+          </motion.div>
+          <motion.div
+  initial={{ opacity: 0, y: 80 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+  viewport={{ once: true }}
+  className="sm:col-span-12 min-h-[400px]"
+>
+  <p className="text-center font-bold text-xl text-gray-800">
+    LIBRARY SERVICES
+  </p>
 
   <div className="flex flex-col md:flex-row gap-6 justify-center mt-10">
-  {/* Reader's Services */}
-  <div className="md:w-1/2 p-8 bg-gray-50 rounded-lg shadow-md  hover:scale-105 transition-transform duration-500">
-    <p className="font-bold text-xl text-gray-800 mb-4">Reader’s Services</p>
 
-    <p className="text-gray-700 md:text-lg leading-relaxed mb-4">
-      Reader’s Services are the sections of a library dedicated to assisting users in accessing and using library materials. These services include circulation, reference, and reserve services, helping patrons locate, borrow, and consult books, journals, and other resources efficiently.
-    </p>
+    {/* Reader's Services */}
+    <motion.div
+      initial={{ opacity: 0, x: -100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      whileHover={{ scale: 1.05 }}
+      className="md:w-1/2 p-8 bg-gray-50 rounded-lg shadow-md transition-transform duration-500"
+    >
+      <p className="font-bold text-xl text-gray-800 mb-4">
+        Reader’s Services
+      </p>
 
-    <ul className="list-disc list-inside text-gray-700 md:text-lg  space-y-1">
-      <li>Circulation</li>
-      <li>Reference Section</li>
-      <li>Reserve Section</li>
-    </ul>
+      <p className="text-gray-700 md:text-lg leading-relaxed mb-4">
+        Reader’s Services are the sections of a library dedicated to assisting users in accessing and using library materials. These services include circulation, reference, and reserve services, helping patrons locate, borrow, and consult books, journals, and other resources efficiently.
+      </p>
+
+      <ul className="list-disc list-inside text-gray-700 md:text-lg space-y-1">
+        <li>Circulation</li>
+        <li>Reference Section</li>
+        <li>Reserve Section</li>
+      </ul>
+    </motion.div>
+
+    {/* Technical Services */}
+    <motion.div
+      initial={{ opacity: 0, x: 100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      whileHover={{ scale: 1.05 }}
+      className="md:w-1/2 p-8 bg-gray-50 rounded-lg shadow-md transition-transform duration-500"
+    >
+      <p className="font-bold text-xl text-gray-800 mb-4">
+        Technical Services
+      </p>
+
+      <p className="text-gray-700 md:text-lg leading-relaxed mb-4">
+        These services take care of acquiring, cataloging, and indexing of books, as well as repair and binding.
+      </p>
+
+      <ul className="list-disc list-inside text-gray-700 md:text-lg space-y-1">
+        <li>Acquisition</li>
+        <li>Cataloging</li>
+        <li>Indexing</li>
+        <li>Repair and Binding</li>
+      </ul>
+    </motion.div>
+
   </div>
-
-  {/* Technical Services */}
-  <div className="md:w-1/2 p-8 bg-gray-50 rounded-lg shadow-md  hover:scale-105 transition-transform duration-500">
-    <p className="font-bold text-xl text-gray-800 mb-4">Technical Services</p>
-
-    <p className="text-gray-700 md:text-lg  leading-relaxed mb-4">
-      These services take care of acquiring, cataloging, and indexing of books, as well as repair and binding.
-    </p>
-
-    <ul className="list-disc list-inside text-gray-700 md:text-lg space-y-1">
-      <li>Acquisition</li>
-      <li>Cataloging</li>
-      <li>Indexing</li>
-      <li>Repair and Binding</li>
-    </ul>
-  </div>
-</div>
-</div>
+</motion.div>
 
 <div className="sm:col-span-12 min-h-[500px] mt-5 mb-5 p-8 flex items-center justify-center text-center">
   <p className="text-xl font-bold max-w-3xl">

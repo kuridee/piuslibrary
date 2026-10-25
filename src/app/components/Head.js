@@ -1,114 +1,135 @@
 "use client";
-import Link from "next/link";
-import { useState } from "react";
-import {Globe, Menu, X} from 'lucide-react';
-import Image from "next/image";
 
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Menu, X, ExternalLink } from "lucide-react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
-  return(
-
-  <header className="text-gray-900 shadow-md">
-
-    <nav className="container mx-auto flex justify-between items-center p-6">
-
-
-    <Link href="/" className="no-underline">
-
-      <h1 className="flex items-center gap-2  text-xl font-bold tracking-wide text-gray-600">
-  
-
-      
-      PIUS XII COLLEGE </h1>
-
-      </Link>
-
-
-      <div className="hidden lg:flex gap-12 text-md text-gray-600">
-
-        <Link href="/"></Link>
-        <Link href="/resources">Online Resources</Link>
-        <Link href="/guidelines">Library Guidelines</Link>
-        <Link href="/facilities">Library Facility</Link>
-        <Link href="/about">About Us</Link>
-        <Link href="/contact">Contact Us</Link>
+  return (
+    <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all">
+      <nav className="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 h-20">
         
+        {/* Brand / Logo */}
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="relative w-11 h-11 flex-shrink-0">
+            <Image
+              src="/images/logo.png"
+              alt="Pius XII College Logo"
+              fill
+              className="object-contain rounded-md transition-transform group-hover:scale-105"
+            />
+          </div>
+          <div className="flex flex-col">
+            <span className="text-lg sm:text-xl font-extrabold tracking-tight text-slate-900 group-hover:text-red-600 transition-colors">
+              PIUS XII COLLEGE
+            </span>
+            <span className="text-[11px] font-semibold tracking-wider text-red-600 uppercase">
+              Library Portal
+            </span>
+          </div>
+        </Link>
+
+        {/* Desktop Navigation Links */}
+        <div className="hidden lg:flex items-center gap-1 xl:gap-2">
+          <Link
+            href="/"
+            className="px-3 py-2 text-sm font-medium text-slate-700 hover:text-red-600 hover:bg-slate-100/70 rounded-lg transition-colors"
+          >
+            Home
+          </Link>
+          <Link
+            href="/facilities"
+            className="px-3 py-2 text-sm font-medium text-slate-700 hover:text-red-600 hover:bg-slate-100/70 rounded-lg transition-colors"
+          >
+            Library Facility
+          </Link>
+          <Link
+            href="/about"
+            className="px-3 py-2 text-sm font-medium text-slate-700 hover:text-red-600 hover:bg-slate-100/70 rounded-lg transition-colors"
+          >
+            About Us
+          </Link>
+          <Link
+            href="/contact"
+            className="px-3 py-2 text-sm font-medium text-slate-700 hover:text-red-600 hover:bg-slate-100/70 rounded-lg transition-colors"
+          >
+            Contact Us
+          </Link>
+
+          {/* OPAC CTA Button */}
+          <Link
+            href="https://opac-sepia.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-4 inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white text-sm font-semibold px-4 py-2.5 rounded-xl shadow-sm hover:shadow-md transition-all duration-200 transform hover:-translate-y-0.5"
+          >
+            <span>OPAC Catalog</span>
+            <ExternalLink size={15} />
+          </Link>
+        </div>
+
+        {/* Mobile Hamburger Toggle */}
+        <button
+          className="lg:hidden p-2 text-slate-700 hover:text-red-600 hover:bg-slate-100 rounded-lg focus:outline-none transition-colors"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle navigation menu"
+        >
+          {isOpen ? <X size={26} /> : <Menu size={26} />}
+        </button>
+      </nav>
+
+      {/* Mobile / Tablet Dropdown Drawer */}
+      <div
+        className={`lg:hidden overflow-hidden bg-white border-b border-slate-200 transition-all duration-300 ease-in-out ${
+          isOpen ? "max-h-96 opacity-100 py-4 px-6" : "max-h-0 opacity-0 py-0 px-6"
+        }`}
+      >
+        <div className="flex flex-col space-y-3">
+          <Link
+            href="/"
+            onClick={() => setIsOpen(false)}
+            className="text-base font-medium text-slate-800 hover:text-red-600 py-1 transition-colors"
+          >
+            Home
+          </Link>
+          <Link
+            href="/facilities"
+            onClick={() => setIsOpen(false)}
+            className="text-base font-medium text-slate-800 hover:text-red-600 py-1 transition-colors"
+          >
+            Library Facility
+          </Link>
+          <Link
+            href="/about"
+            onClick={() => setIsOpen(false)}
+            className="text-base font-medium text-slate-800 hover:text-red-600 py-1 transition-colors"
+          >
+            About Us
+          </Link>
+          <Link
+            href="/contact"
+            onClick={() => setIsOpen(false)}
+            className="text-base font-medium text-slate-800 hover:text-red-600 py-1 transition-colors"
+          >
+            Contact Us
+          </Link>
+          <div className="pt-2">
+            <Link
+              href="https://opac-sepia.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsOpen(false)}
+              className="w-full inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold py-2.5 rounded-xl shadow-sm transition-colors"
+            >
+              <span>Explore OPAC Catalog</span>
+              <ExternalLink size={16} />
+            </Link>
+          </div>
+        </div>
       </div>
-      <button className="lg:hidden focus:outline-none"
-    onClick={()=>setIsOpen(!isOpen)}>
-
-      {isOpen ? <X size={28}/>:<Menu size={28}/>}
-
-
-    </button>
-
-    </nav>
-
-
-   
-
- {/* Mobile + Tablet Dropdown Menu */}
- <div
-  className={`lg:hidden overflow-hidden bg-gray-800 text-white transition-all duration-500 ease-in-out ${
-    isOpen
-      ? "max-h-96 opacity-100 p-5"
-      : "max-h-0 opacity-0 px-5 py-0"
-  }`}
->
-  <div className="space-y-2">
-    
-
-    <Link href="/resources" className="block hover:text-gray-300">
-      Online Resources
-    </Link>
-
-    <Link href="/guidelines" className="block hover:text-gray-300">
-      Library Guidelines
-    </Link>
-
-    <Link href="/facilities" className="block hover:text-gray-300">
-      Library Facility
-    </Link>
-
-    <Link href="/about" className="block hover:text-gray-300">
-      About Us
-    </Link>
-
-    <Link href="/contact" className="block hover:text-gray-300">
-      Contact Us
-    </Link>
-  </div>
-</div>
-  </header>
-
+    </header>
   );
-}<div className="sm:col-span-12 mt-5 mb-5 p-8 flex flex-col md:flex-row items-center md:items-center justify-center gap-10 bg-gray-50 rounded-xl shadow-sm">
-
-{/* Left Side - Text */}
-<div className="md:w-1/2 text-center md:text-left">
-  <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6">
-    The College Library, through its resources, facility, and staff, is dedicated
-    to providing open access to information and offering the services and tools
-    to locate and interpret that information. As patron needs and information
-    technologies continue to evolve, so too will the means by which the Library
-    fulfills its role within the institution.
-  </p>
-
-  <p className="text-2xl font-bold text-gray-800 mb-1">Regin Maligad</p>
-  <p className="text-lg text-gray-600 mb-1">Library Head</p>
-  <p className="text-lg text-gray-600">Pius XII College</p>
-</div>
-
-{/* Right Side - Image */}
-<div className="relative w-56 h-56 md:w-72 md:h-72 rounded-lg overflow-hidden shadow-md">
-  <Image
-    src="/images/regin.jpg"
-    alt="Regin Maligad"
-    fill
-    className="object-cover rounded-lg"
-  />
-</div>
-
-</div>
+}

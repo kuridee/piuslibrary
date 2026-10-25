@@ -54,12 +54,14 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/resources" className="hover:text-white transition">
-                e-Learning
+              <Link href="https://opac-sepia.vercel.app/"  target="_blank"
+              rel="noopener noreferrer" className="hover:text-white transition">
+                OPAC Catalog
               </Link>
             </li>
             <li>
-              <Link href="/resources" className="hover:text-white transition">
+              <Link href="https://opac-sepia.vercel.app/"  target="_blank"
+              rel="noopener noreferrer" className="hover:text-white transition">
                 PDF Collections
               </Link>
             </li>
@@ -78,12 +80,7 @@ export default function Footer() {
             >
               Facebook
             </a>
-            <a href="#" className="text-gray-400 hover:text-white transition">
-              Twitter
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white transition">
-              Instagram
-            </a>
+           
           </div>
         </div>
       </div>

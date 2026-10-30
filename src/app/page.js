@@ -211,7 +211,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-7 order-2 md:order-1">
             <span className="text-xs font-bold text-red-600 uppercase tracking-widest">Academic Excellence</span>
-            <h3 className="text-3xl font-bold text-slate-900 mt-1 mb-1">Sr. Providenza</h3>
+            <h3 className="text-3xl font-bold text-slate-900 mt-1 mb-1">     Sr. Ma. Ninfa T. Escobañez, SCGR, Ed.D.</h3>
             <p className="text-red-600 font-medium text-lg mb-4">Dean of Studies</p>
             <p className="text-slate-600 leading-relaxed">
               The College Library is devoted to advancing the academic mission of Pius XII College by ensuring open and equitable access to information resources. Through its comprehensive collection, modern facilities, and dedicated staff, the Library supports teaching, learning, and research endeavors.

@@ -24,7 +24,7 @@ export default function Header() {
           </div>
           <div className="flex flex-col">
             <span className="text-lg sm:text-xl font-extrabold tracking-tight text-slate-900 group-hover:text-red-600 transition-colors">
-              PIUS XII COLLEGE
+              PIUS XII COLLEGE ILOILO
             </span>
             <span className="text-[11px] font-semibold tracking-wider text-red-600 uppercase">
               Library Portal

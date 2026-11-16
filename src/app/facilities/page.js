@@ -88,6 +88,8 @@ export default function FacilitiesPage() {
                 src="/images/38.jpg"
                 alt="Library Room"
                 fill
+                priority
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent"></div>
@@ -146,6 +148,8 @@ export default function FacilitiesPage() {
                 src="/images/35.jpg"
                 alt="Library Integrated System"
                 fill
+                priority
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent"></div>
@@ -170,6 +174,8 @@ export default function FacilitiesPage() {
                 src="/images/34.jpg"
                 alt="Online Public Access Catalog"
                 fill
+                priority
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent"></div>
@@ -244,6 +250,8 @@ export default function FacilitiesPage() {
                 src="/images/36.jpg"
                 alt="Discussion Area View 1"
                 fill
+                priority
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
             </motion.div>
@@ -257,6 +265,8 @@ export default function FacilitiesPage() {
                 src="/images/37.jpg"
                 alt="Discussion Area View 2"
                 fill
+                priority
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
             </motion.div>

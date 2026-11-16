@@ -185,7 +185,8 @@ export default function Home() {
           </div>
           <div className="md:col-span-5 flex justify-center order-1 md:order-2">
             <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-2xl overflow-hidden shadow-xl border-4 border-white">
-              <Image src="/images/lib.png" alt="Regina A. Maligad" fill className="object-cover" />
+              <Image src="/images/lib.png" alt="Regina A. Maligad" fill className="object-cover"   priority
+              sizes="(max-width: 768px) 100vw, 50vw" />
             </div>
           </div>
         </div>
@@ -194,7 +195,8 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-5 flex justify-center">
             <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-2xl overflow-hidden shadow-xl border-4 border-white">
-              <Image src="/images/pads.png" alt="Rev. Fr. Emmanuel G. Tuberada" fill className="object-cover" />
+              <Image src="/images/pads.png" alt="Rev. Fr. Emmanuel G. Tuberada" fill className="object-cover"   priority
+              sizes="(max-width: 768px) 100vw, 50vw" />
             </div>
           </div>
           <div className="md:col-span-7">
@@ -219,7 +221,14 @@ export default function Home() {
           </div>
           <div className="md:col-span-5 flex justify-center order-1 md:order-2">
             <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-2xl overflow-hidden shadow-xl border-4 border-white">
-              <Image src="/images/sis.png" alt="Sr. Providenza" fill className="object-cover" />
+                        <Image 
+              src="/images/sis.png" 
+              alt="Sr. Providenza" 
+              fill 
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover" 
+/>
             </div>
           </div>
         </div>
